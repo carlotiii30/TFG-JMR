@@ -22,7 +22,7 @@ import javax.imageio.ImageIO;
 public class PromptGeneratedImageDescriptor
         extends AbstractPromptImageDescriptor<PromptGeneratedImageDescriptor> {
 
-    private static final String DEFAULT_API_TOKEN = "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";
+    private static final String DEFAULT_API_TOKEN = "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";
     private static final String API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0";
 
     private final String apiToken;
@@ -46,6 +46,7 @@ public class PromptGeneratedImageDescriptor
      */
     public PromptGeneratedImageDescriptor(String prompt, String apiToken) {
         super(prompt, new DefaultComparator());
+        System.out.print(apiToken);
         this.apiToken = apiToken;
     }
 
